@@ -1,0 +1,10 @@
+C:\Users\Alumno\Downloads\ListaTareas\ListaTareas\bin\Debug\ListaTareas.exe.config
+C:\Users\Alumno\Downloads\ListaTareas\ListaTareas\bin\Debug\ListaTareas.exe
+C:\Users\Alumno\Downloads\ListaTareas\ListaTareas\bin\Debug\ListaTareas.pdb
+C:\Users\Alumno\Downloads\ListaTareas\ListaTareas\obj\Debug\ListaTareas.csproj.AssemblyReference.cache
+C:\Users\Alumno\Downloads\ListaTareas\ListaTareas\obj\Debug\ListaTareas.Properties.Resources.resources
+C:\Users\Alumno\Downloads\ListaTareas\ListaTareas\obj\Debug\ListaTareas.csproj.GenerateResource.cache
+C:\Users\Alumno\Downloads\ListaTareas\ListaTareas\obj\Debug\ListaTareas.csproj.CoreCompileInputs.cache
+C:\Users\Alumno\Downloads\ListaTareas\ListaTareas\obj\Debug\ListaTareas.exe
+C:\Users\Alumno\Downloads\ListaTareas\ListaTareas\obj\Debug\ListaTareas.pdb
+C:\Users\Alumno\Downloads\ListaTareas\ListaTareas\obj\Debug\ListaTareas.ToDoList.resources
