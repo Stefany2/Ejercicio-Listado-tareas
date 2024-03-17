@@ -8,3 +8,13 @@ C:\Users\Alumno\Downloads\ListaTareas\ListaTareas\obj\Debug\ListaTareas.csproj.C
 C:\Users\Alumno\Downloads\ListaTareas\ListaTareas\obj\Debug\ListaTareas.exe
 C:\Users\Alumno\Downloads\ListaTareas\ListaTareas\obj\Debug\ListaTareas.pdb
 C:\Users\Alumno\Downloads\ListaTareas\ListaTareas\obj\Debug\ListaTareas.ToDoList.resources
+C:\Users\user\Downloads\Ejercicio-Listado-tareas\ListaTareas\bin\Debug\ListaTareas.exe.config
+C:\Users\user\Downloads\Ejercicio-Listado-tareas\ListaTareas\bin\Debug\ListaTareas.exe
+C:\Users\user\Downloads\Ejercicio-Listado-tareas\ListaTareas\bin\Debug\ListaTareas.pdb
+C:\Users\user\Downloads\Ejercicio-Listado-tareas\ListaTareas\obj\Debug\ListaTareas.csproj.AssemblyReference.cache
+C:\Users\user\Downloads\Ejercicio-Listado-tareas\ListaTareas\obj\Debug\ListaTareas.ToDoList.resources
+C:\Users\user\Downloads\Ejercicio-Listado-tareas\ListaTareas\obj\Debug\ListaTareas.Properties.Resources.resources
+C:\Users\user\Downloads\Ejercicio-Listado-tareas\ListaTareas\obj\Debug\ListaTareas.csproj.GenerateResource.cache
+C:\Users\user\Downloads\Ejercicio-Listado-tareas\ListaTareas\obj\Debug\ListaTareas.csproj.CoreCompileInputs.cache
+C:\Users\user\Downloads\Ejercicio-Listado-tareas\ListaTareas\obj\Debug\ListaTareas.exe
+C:\Users\user\Downloads\Ejercicio-Listado-tareas\ListaTareas\obj\Debug\ListaTareas.pdb

@@ -40,7 +40,6 @@
             this.saveButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.editButton = new System.Windows.Forms.Button();
-            this.ToDoListView = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -72,8 +71,16 @@
             this.checkBox20 = new System.Windows.Forms.CheckBox();
             this.checkBox21 = new System.Windows.Forms.CheckBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.label13 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Actividad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnTareaRealizada = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ToDoListView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -81,7 +88,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(-7, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -105,22 +112,22 @@
             // titleTexbox
             // 
             this.titleTexbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.titleTexbox.Location = new System.Drawing.Point(374, 65);
+            this.titleTexbox.Location = new System.Drawing.Point(557, 49);
             this.titleTexbox.Margin = new System.Windows.Forms.Padding(4);
             this.titleTexbox.Multiline = true;
             this.titleTexbox.Name = "titleTexbox";
-            this.titleTexbox.Size = new System.Drawing.Size(497, 24);
+            this.titleTexbox.Size = new System.Drawing.Size(336, 24);
             this.titleTexbox.TabIndex = 2;
             this.titleTexbox.TextChanged += new System.EventHandler(this.titleTexbox_TextChanged);
             // 
             // descriptionTexbox
             // 
             this.descriptionTexbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.descriptionTexbox.Location = new System.Drawing.Point(374, 117);
+            this.descriptionTexbox.Location = new System.Drawing.Point(555, 101);
             this.descriptionTexbox.Margin = new System.Windows.Forms.Padding(4);
             this.descriptionTexbox.Multiline = true;
             this.descriptionTexbox.Name = "descriptionTexbox";
-            this.descriptionTexbox.Size = new System.Drawing.Size(497, 55);
+            this.descriptionTexbox.Size = new System.Drawing.Size(347, 34);
             this.descriptionTexbox.TabIndex = 3;
             this.descriptionTexbox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -129,7 +136,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(379, 93);
+            this.label2.Location = new System.Drawing.Point(664, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 20);
             this.label2.TabIndex = 4;
@@ -142,21 +149,22 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(379, 45);
+            this.label3.Location = new System.Drawing.Point(657, 25);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 20);
+            this.label3.Size = new System.Drawing.Size(110, 20);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Titulo:";
+            this.label3.Text = "ACTIVIDAD:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // newButton
             // 
             this.newButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.newButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newButton.ForeColor = System.Drawing.Color.Black;
-            this.newButton.Location = new System.Drawing.Point(374, 178);
+            this.newButton.Location = new System.Drawing.Point(418, 142);
             this.newButton.Name = "newButton";
-            this.newButton.Size = new System.Drawing.Size(113, 39);
+            this.newButton.Size = new System.Drawing.Size(113, 40);
             this.newButton.TabIndex = 6;
             this.newButton.Text = "Nuevo";
             this.newButton.UseVisualStyleBackColor = false;
@@ -167,7 +175,7 @@
             this.saveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.saveButton.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveButton.ForeColor = System.Drawing.Color.Black;
-            this.saveButton.Location = new System.Drawing.Point(755, 178);
+            this.saveButton.Location = new System.Drawing.Point(779, 142);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(116, 39);
             this.saveButton.TabIndex = 7;
@@ -180,7 +188,7 @@
             this.deleteButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.deleteButton.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteButton.ForeColor = System.Drawing.Color.Black;
-            this.deleteButton.Location = new System.Drawing.Point(635, 178);
+            this.deleteButton.Location = new System.Drawing.Point(659, 142);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(114, 39);
             this.deleteButton.TabIndex = 8;
@@ -193,7 +201,7 @@
             this.editButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.editButton.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editButton.ForeColor = System.Drawing.Color.Black;
-            this.editButton.Location = new System.Drawing.Point(503, 177);
+            this.editButton.Location = new System.Drawing.Point(537, 142);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(116, 39);
             this.editButton.TabIndex = 9;
@@ -201,23 +209,12 @@
             this.editButton.UseVisualStyleBackColor = false;
             this.editButton.Click += new System.EventHandler(this.edithButton_Click);
             // 
-            // ToDoListView
-            // 
-            this.ToDoListView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.ToDoListView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ToDoListView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ToDoListView.Location = new System.Drawing.Point(374, 244);
-            this.ToDoListView.Name = "ToDoListView";
-            this.ToDoListView.Size = new System.Drawing.Size(514, 119);
-            this.ToDoListView.TabIndex = 10;
-            this.ToDoListView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ToDoList_CellContentClick);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(379, 221);
+            this.label4.Location = new System.Drawing.Point(414, 187);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(164, 20);
             this.label4.TabIndex = 11;
@@ -228,11 +225,11 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.Color.Black;
             this.checkBox1.Location = new System.Drawing.Point(212, 420);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(123, 20);
+            this.checkBox1.Size = new System.Drawing.Size(114, 19);
             this.checkBox1.TabIndex = 12;
             this.checkBox1.Text = "Ir a clase de baile";
             this.checkBox1.UseVisualStyleBackColor = false;
@@ -242,11 +239,11 @@
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox2.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox2.ForeColor = System.Drawing.Color.Black;
             this.checkBox2.Location = new System.Drawing.Point(212, 446);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(110, 20);
+            this.checkBox2.Size = new System.Drawing.Size(103, 19);
             this.checkBox2.TabIndex = 13;
             this.checkBox2.Text = "Pasear al perro";
             this.checkBox2.UseVisualStyleBackColor = false;
@@ -256,11 +253,11 @@
             // 
             this.checkBox3.AutoSize = true;
             this.checkBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.checkBox3.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox3.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox3.ForeColor = System.Drawing.Color.Black;
             this.checkBox3.Location = new System.Drawing.Point(212, 472);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(121, 20);
+            this.checkBox3.Size = new System.Drawing.Size(113, 19);
             this.checkBox3.TabIndex = 14;
             this.checkBox3.Text = "Limpiar la cocina";
             this.checkBox3.UseVisualStyleBackColor = false;
@@ -270,10 +267,11 @@
             // 
             this.checkBox4.AutoSize = true;
             this.checkBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.checkBox4.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox4.ForeColor = System.Drawing.Color.Black;
-            this.checkBox4.Location = new System.Drawing.Point(344, 420);
+            this.checkBox4.Location = new System.Drawing.Point(344, 439);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(104, 20);
+            this.checkBox4.Size = new System.Drawing.Size(97, 19);
             this.checkBox4.TabIndex = 15;
             this.checkBox4.Text = "Clase de Baile";
             this.checkBox4.UseVisualStyleBackColor = false;
@@ -283,12 +281,13 @@
             // 
             this.checkBox5.AutoSize = true;
             this.checkBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.checkBox5.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox5.ForeColor = System.Drawing.Color.Black;
-            this.checkBox5.Location = new System.Drawing.Point(344, 448);
+            this.checkBox5.Location = new System.Drawing.Point(344, 414);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(104, 20);
+            this.checkBox5.Size = new System.Drawing.Size(117, 19);
             this.checkBox5.TabIndex = 16;
-            this.checkBox5.Text = "Clase de Baile";
+            this.checkBox5.Text = "Limpiar mi cuarto";
             this.checkBox5.UseVisualStyleBackColor = false;
             this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
             // 
@@ -296,8 +295,8 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(371, 374);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label5.Location = new System.Drawing.Point(429, 356);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(172, 20);
             this.label5.TabIndex = 17;
@@ -323,7 +322,7 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(347, 396);
+            this.label7.Location = new System.Drawing.Point(368, 395);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(74, 16);
             this.label7.TabIndex = 19;
@@ -336,7 +335,7 @@
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(451, 396);
+            this.label8.Location = new System.Drawing.Point(465, 396);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(91, 15);
             this.label8.TabIndex = 20;
@@ -349,7 +348,7 @@
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(576, 396);
+            this.label9.Location = new System.Drawing.Point(600, 398);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(63, 15);
             this.label9.TabIndex = 21;
@@ -362,7 +361,7 @@
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(679, 397);
+            this.label10.Location = new System.Drawing.Point(741, 398);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(70, 15);
             this.label10.TabIndex = 22;
@@ -389,7 +388,7 @@
             this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(796, 398);
+            this.label12.Location = new System.Drawing.Point(356, 494);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(65, 15);
             this.label12.TabIndex = 24;
@@ -401,24 +400,26 @@
             // 
             this.checkBox6.AutoSize = true;
             this.checkBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.checkBox6.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox6.ForeColor = System.Drawing.Color.Black;
-            this.checkBox6.Location = new System.Drawing.Point(344, 466);
+            this.checkBox6.Location = new System.Drawing.Point(344, 464);
             this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(104, 20);
+            this.checkBox6.Size = new System.Drawing.Size(92, 19);
             this.checkBox6.TabIndex = 25;
-            this.checkBox6.Text = "Clase de Baile";
+            this.checkBox6.Text = "Leer un libro";
             this.checkBox6.UseVisualStyleBackColor = false;
             // 
             // checkBox7
             // 
             this.checkBox7.AutoSize = true;
             this.checkBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.checkBox7.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox7.ForeColor = System.Drawing.Color.Black;
-            this.checkBox7.Location = new System.Drawing.Point(454, 422);
+            this.checkBox7.Location = new System.Drawing.Point(468, 415);
             this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(104, 20);
+            this.checkBox7.Size = new System.Drawing.Size(99, 19);
             this.checkBox7.TabIndex = 26;
-            this.checkBox7.Text = "Clase de Baile";
+            this.checkBox7.Text = "Limpiar Jardin";
             this.checkBox7.UseVisualStyleBackColor = false;
             // 
             // checkBox8
@@ -426,184 +427,284 @@
             this.checkBox8.AutoSize = true;
             this.checkBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.checkBox8.ForeColor = System.Drawing.Color.Black;
-            this.checkBox8.Location = new System.Drawing.Point(454, 448);
+            this.checkBox8.Location = new System.Drawing.Point(519, 507);
             this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(104, 20);
+            this.checkBox8.Size = new System.Drawing.Size(100, 20);
             this.checkBox8.TabIndex = 27;
-            this.checkBox8.Text = "Clase de Baile";
+            this.checkBox8.Text = "Tender Ropa";
             this.checkBox8.UseVisualStyleBackColor = false;
+            this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
             // 
             // checkBox9
             // 
             this.checkBox9.AutoSize = true;
             this.checkBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.checkBox9.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox9.ForeColor = System.Drawing.Color.Black;
-            this.checkBox9.Location = new System.Drawing.Point(454, 466);
+            this.checkBox9.Location = new System.Drawing.Point(464, 467);
             this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(104, 20);
+            this.checkBox9.Size = new System.Drawing.Size(103, 19);
             this.checkBox9.TabIndex = 28;
-            this.checkBox9.Text = "Clase de Baile";
+            this.checkBox9.Text = "Sacar la basura";
             this.checkBox9.UseVisualStyleBackColor = false;
             // 
             // checkBox10
             // 
             this.checkBox10.AutoSize = true;
             this.checkBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.checkBox10.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox10.ForeColor = System.Drawing.Color.Black;
-            this.checkBox10.Location = new System.Drawing.Point(564, 414);
+            this.checkBox10.Location = new System.Drawing.Point(579, 415);
             this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(104, 20);
+            this.checkBox10.Size = new System.Drawing.Size(119, 19);
             this.checkBox10.TabIndex = 29;
-            this.checkBox10.Text = "Clase de Baile";
+            this.checkBox10.Text = "Ayudar a comprar";
             this.checkBox10.UseVisualStyleBackColor = false;
             // 
             // checkBox11
             // 
             this.checkBox11.AutoSize = true;
             this.checkBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.checkBox11.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox11.ForeColor = System.Drawing.Color.Black;
-            this.checkBox11.Location = new System.Drawing.Point(564, 440);
+            this.checkBox11.Location = new System.Drawing.Point(579, 440);
             this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(104, 20);
+            this.checkBox11.Size = new System.Drawing.Size(107, 19);
             this.checkBox11.TabIndex = 30;
-            this.checkBox11.Text = "Clase de Baile";
+            this.checkBox11.Text = "Lavar los platos";
             this.checkBox11.UseVisualStyleBackColor = false;
             // 
             // checkBox12
             // 
             this.checkBox12.AutoSize = true;
             this.checkBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.checkBox12.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox12.ForeColor = System.Drawing.Color.Black;
-            this.checkBox12.Location = new System.Drawing.Point(564, 466);
+            this.checkBox12.Location = new System.Drawing.Point(579, 467);
             this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(104, 20);
+            this.checkBox12.Size = new System.Drawing.Size(118, 19);
             this.checkBox12.TabIndex = 31;
-            this.checkBox12.Text = "Clase de Baile";
+            this.checkBox12.Text = "Recoger la basura";
             this.checkBox12.UseVisualStyleBackColor = false;
             // 
             // checkBox13
             // 
             this.checkBox13.AutoSize = true;
             this.checkBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.checkBox13.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox13.ForeColor = System.Drawing.Color.Black;
-            this.checkBox13.Location = new System.Drawing.Point(674, 414);
+            this.checkBox13.Location = new System.Drawing.Point(717, 415);
             this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(104, 20);
+            this.checkBox13.Size = new System.Drawing.Size(122, 19);
             this.checkBox13.TabIndex = 32;
-            this.checkBox13.Text = "Clase de Baile";
+            this.checkBox13.Text = "Limpiar la ventana";
             this.checkBox13.UseVisualStyleBackColor = false;
             // 
             // checkBox14
             // 
             this.checkBox14.AutoSize = true;
             this.checkBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.checkBox14.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox14.ForeColor = System.Drawing.Color.Black;
-            this.checkBox14.Location = new System.Drawing.Point(674, 440);
+            this.checkBox14.Location = new System.Drawing.Point(755, 465);
             this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(104, 20);
+            this.checkBox14.Size = new System.Drawing.Size(65, 19);
             this.checkBox14.TabIndex = 33;
-            this.checkBox14.Text = "Clase de Baile";
+            this.checkBox14.Text = "Cocinar";
             this.checkBox14.UseVisualStyleBackColor = false;
             // 
             // checkBox15
             // 
             this.checkBox15.AutoSize = true;
             this.checkBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.checkBox15.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox15.ForeColor = System.Drawing.Color.Black;
-            this.checkBox15.Location = new System.Drawing.Point(674, 466);
+            this.checkBox15.Location = new System.Drawing.Point(722, 440);
             this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(104, 20);
+            this.checkBox15.Size = new System.Drawing.Size(117, 19);
             this.checkBox15.TabIndex = 34;
-            this.checkBox15.Text = "Clase de Baile";
+            this.checkBox15.Text = "Ordenar la cocina";
             this.checkBox15.UseVisualStyleBackColor = false;
+            this.checkBox15.CheckedChanged += new System.EventHandler(this.checkBox15_CheckedChanged);
             // 
             // checkBox16
             // 
             this.checkBox16.AutoSize = true;
             this.checkBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.checkBox16.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox16.ForeColor = System.Drawing.Color.Black;
-            this.checkBox16.Location = new System.Drawing.Point(784, 415);
+            this.checkBox16.Location = new System.Drawing.Point(351, 512);
             this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(104, 20);
+            this.checkBox16.Size = new System.Drawing.Size(85, 19);
             this.checkBox16.TabIndex = 35;
-            this.checkBox16.Text = "Clase de Baile";
+            this.checkBox16.Text = "Jugar voley";
             this.checkBox16.UseVisualStyleBackColor = false;
             // 
             // checkBox17
             // 
             this.checkBox17.AutoSize = true;
             this.checkBox17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.checkBox17.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox17.ForeColor = System.Drawing.Color.Black;
-            this.checkBox17.Location = new System.Drawing.Point(784, 440);
+            this.checkBox17.Location = new System.Drawing.Point(350, 559);
             this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(104, 20);
+            this.checkBox17.Size = new System.Drawing.Size(111, 19);
             this.checkBox17.TabIndex = 36;
-            this.checkBox17.Text = "Clase de Baile";
+            this.checkBox17.Text = "Realizar ejercicio";
             this.checkBox17.UseVisualStyleBackColor = false;
             // 
             // checkBox18
             // 
             this.checkBox18.AutoSize = true;
             this.checkBox18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.checkBox18.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox18.ForeColor = System.Drawing.Color.Black;
-            this.checkBox18.Location = new System.Drawing.Point(784, 466);
+            this.checkBox18.Location = new System.Drawing.Point(350, 534);
             this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(104, 20);
+            this.checkBox18.Size = new System.Drawing.Size(92, 19);
             this.checkBox18.TabIndex = 37;
-            this.checkBox18.Text = "Clase de Baile";
+            this.checkBox18.Text = "Leer un libro";
             this.checkBox18.UseVisualStyleBackColor = false;
             // 
             // checkBox19
             // 
             this.checkBox19.AutoSize = true;
             this.checkBox19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.checkBox19.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox19.ForeColor = System.Drawing.Color.Black;
-            this.checkBox19.Location = new System.Drawing.Point(525, 507);
+            this.checkBox19.Location = new System.Drawing.Point(520, 533);
             this.checkBox19.Name = "checkBox19";
-            this.checkBox19.Size = new System.Drawing.Size(104, 20);
+            this.checkBox19.Size = new System.Drawing.Size(95, 19);
             this.checkBox19.TabIndex = 38;
-            this.checkBox19.Text = "Clase de Baile";
+            this.checkBox19.Text = "Realizar tarea";
             this.checkBox19.UseVisualStyleBackColor = false;
+            this.checkBox19.CheckedChanged += new System.EventHandler(this.checkBox19_CheckedChanged);
             // 
             // checkBox20
             // 
             this.checkBox20.AutoSize = true;
             this.checkBox20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.checkBox20.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox20.ForeColor = System.Drawing.Color.Black;
-            this.checkBox20.Location = new System.Drawing.Point(525, 528);
+            this.checkBox20.Location = new System.Drawing.Point(519, 558);
             this.checkBox20.Name = "checkBox20";
-            this.checkBox20.Size = new System.Drawing.Size(104, 20);
+            this.checkBox20.Size = new System.Drawing.Size(110, 19);
             this.checkBox20.TabIndex = 39;
-            this.checkBox20.Text = "Clase de Baile";
+            this.checkBox20.Text = "Planchar la ropa";
             this.checkBox20.UseVisualStyleBackColor = false;
             // 
             // checkBox21
             // 
             this.checkBox21.AutoSize = true;
             this.checkBox21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.checkBox21.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox21.ForeColor = System.Drawing.Color.Black;
-            this.checkBox21.Location = new System.Drawing.Point(525, 554);
+            this.checkBox21.Location = new System.Drawing.Point(468, 440);
             this.checkBox21.Name = "checkBox21";
-            this.checkBox21.Size = new System.Drawing.Size(104, 20);
+            this.checkBox21.Size = new System.Drawing.Size(99, 19);
             this.checkBox21.TabIndex = 40;
-            this.checkBox21.Text = "Clase de Baile";
+            this.checkBox21.Text = "Barrer el patio";
             this.checkBox21.UseVisualStyleBackColor = false;
+            this.checkBox21.CheckedChanged += new System.EventHandler(this.checkBox21_CheckedChanged);
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(1, 93);
+            this.monthCalendar1.Location = new System.Drawing.Point(133, 43);
             this.monthCalendar1.Margin = new System.Windows.Forms.Padding(8);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 41;
             this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label13.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Red;
+            this.label13.Location = new System.Drawing.Point(594, 191);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(92, 15);
+            this.label13.TabIndex = 43;
+            this.label13.Text = "Fecha ingresada";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Hora,
+            this.Actividad,
+            this.Descripción});
+            this.dataGridView1.Location = new System.Drawing.Point(230, 216);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(672, 131);
+            this.dataGridView1.TabIndex = 44;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Hora
+            // 
+            this.Hora.HeaderText = "Hora";
+            this.Hora.Name = "Hora";
+            this.Hora.Width = 60;
+            // 
+            // Actividad
+            // 
+            this.Actividad.HeaderText = "Actividad";
+            this.Actividad.Name = "Actividad";
+            this.Actividad.Width = 300;
+            // 
+            // Descripción
+            // 
+            this.Descripción.HeaderText = "Descripción";
+            this.Descripción.Name = "Descripción";
+            this.Descripción.Width = 290;
+            // 
+            // btnTareaRealizada
+            // 
+            this.btnTareaRealizada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnTareaRealizada.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTareaRealizada.ForeColor = System.Drawing.Color.Black;
+            this.btnTareaRealizada.Location = new System.Drawing.Point(796, 191);
+            this.btnTareaRealizada.Name = "btnTareaRealizada";
+            this.btnTareaRealizada.Size = new System.Drawing.Size(106, 23);
+            this.btnTareaRealizada.TabIndex = 45;
+            this.btnTareaRealizada.Text = "Tarea Realizada";
+            this.btnTareaRealizada.UseVisualStyleBackColor = false;
+            this.btnTareaRealizada.Click += new System.EventHandler(this.btnTareaRealizada_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(423, 53);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(65, 20);
+            this.label14.TabIndex = 46;
+            this.label14.Text = "HORA:";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.textBox1.Location = new System.Drawing.Point(393, 78);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(149, 24);
+            this.textBox1.TabIndex = 47;
+            // 
             // ToDoList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(915, 575);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.btnTareaRealizada);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.checkBox21);
             this.Controls.Add(this.checkBox20);
@@ -635,7 +736,6 @@
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.ToDoListView);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.saveButton);
@@ -647,12 +747,13 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.Red;
+            this.ForeColor = System.Drawing.Color.Navy;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ToDoList";
             this.Text = "LISTA";
+            this.Load += new System.EventHandler(this.ToDoList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ToDoListView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -671,7 +772,6 @@
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button editButton;
-        private System.Windows.Forms.DataGridView ToDoListView;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
@@ -703,6 +803,14 @@
         private System.Windows.Forms.CheckBox checkBox20;
         private System.Windows.Forms.CheckBox checkBox21;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Hora;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Actividad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripción;
+        private System.Windows.Forms.Button btnTareaRealizada;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
