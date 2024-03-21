@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Login
 {
-    public partial class Form1 : Form
+    public partial class BIENVENIDOS : Form
     {
-        public Form1()
+        public BIENVENIDOS()
         {
             InitializeComponent();
         }
@@ -44,6 +44,18 @@ namespace Login
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            // boton regresar
+
+            // Crear una instancia del formulario INICIAR
+            INICIAR iniciarForm = new INICIAR();
+
+            // Mostrar el formulario INICIAR
+            iniciarForm.Show();
 
         }
     }
